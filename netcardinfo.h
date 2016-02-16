@@ -4,7 +4,7 @@ extern "C" {
 #ifdef WIN32
 __declspec(dllexport)
 #endif
-void initpcapy(void);
+void initnetcardinfo(void);
 }
 
 extern PyObject* PcapError;

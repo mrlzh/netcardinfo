@@ -50,12 +50,12 @@ findalldevs(PyObject *self, PyObject *args)
   return list;
 }
 
-static PyMethodDef pcap_methods[] = {
+static PyMethodDef netcardinfo_methods[] = {
   {"findalldevs", findalldevs, METH_VARARGS, "findalldevs() lists all available interfaces"},
   {NULL, NULL}
 };
 
-static char *pcap_doc =
+static char *netcardinfo_doc =
 "\nA wrapper for the Packet Capture (PCAP) library\n";
 
 void
@@ -64,7 +64,7 @@ initnetcardinfo(void)
   PyObject *m, *d;
 
 
-  m = Py_InitModule3("netcardinfo", pcap_methods, pcap_doc);
+  m = Py_InitModule3("netcardinfo", netcardinfo_methods, netcardinfo_doc);
 
   /* Direct from pcap's net/bpf.h. */
   PyModule_AddIntConstant(m, "DLT_NULL", 0);
